@@ -33,6 +33,3 @@ Installation
 
 5. Open in browser:
    [http://localhost:8080](http://localhost:8080)
-
-
-If you want, I can also make a **super short version** in just 3–4 lines for GitHub. Do you want me to do that?
