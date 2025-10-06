@@ -1,0 +1,489 @@
+/* Landing Page Styles */
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-content {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 600px;
+}
+
+.landing-content h1 {
+    font-size: 3rem;
+    color: #2c7a7b;
+    margin-bottom: 20px;
+}
+
+.landing-content p {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .landing-content {
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .landing-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .landing-content p {
+        font-size: 1rem;
+    }
+}
+/* Navbar Styles */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.85); /* soft translucent white */
+    backdrop-filter: blur(10px); /* nice frosted effect */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #ff6f91;
+}
+
+.navbar .navbar-brand i {
+    color: #ff6f91;
+}
+
+.navbar .nav-link {
+    color: #555;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #ff4c70;
+}
+
+.navbar .nav-link.active {
+    color: #ff6f91;
+    font-weight: 600;
+}
+
+/* Responsive Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,111,145, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/ %3E%3C/svg%3E");
+}
+/* Form Container */
+.form-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container h1 {
+    font-size: 2rem;
+    color: #ff6f91;
+    margin-bottom: 10px;
+}
+
+.form-container .subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.form-container input:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 5px rgba(255,111,145,0.5);
+}
+
+.form-container .btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #a8edea;
+    background-image: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container .btn:hover {
+    background-image: linear-gradient(135deg, #fed6e3, #a8edea);
+    color: #333;
+}
+
+.form-container .note {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-container .note a {
+    color: #ff6f91;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-container .note a:hover {
+    text-decoration: underline;
+}
+/* Dashboard container */
+.dashboard-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+.dashboard-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.dashboard-container h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Posts list */
+.posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Post cards */
+.post-card {
+    background: #fed6e3; /* soft pink */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Post content */
+.post-card p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Post timestamp */
+.post-card small {
+    display: block;
+    margin-top: 0.5rem;
+    color: #666;
+}
+
+/* Delete button inside post */
+.delete-btn {
+    margin-top: 0.5rem;
+}
+
+/* Add New Post button */
+.add-post-btn {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-post-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.gradient-btn {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+/* Shared Post Form Card (Edit/Add Post) */
+.post-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem auto;
+}
+
+.post-form-card {
+    background: rgba(255, 255, 255, 0.95); /* soft white */
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.post-form-card h1 {
+    text-align: center;
+    color: #ff6f91; /* pink header */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.post-form-card textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.post-form-card textarea:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 10px rgba(255,111,145,0.5);
+}
+
+.post-form-card .btn {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post-form-card .btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.post-form-card .back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    color: #ff6f91;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.post-form-card .back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .post-form-card {
+        padding: 30px;
+    }
+
+    .post-form-card h1 {
+        font-size: 1.8rem;
+    }
+}
+/* Full Post View Card */
+.full-post-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+}
+
+.full-post-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.full-post-card h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff6f91;
+    text-align: center;
+}
+
+.full-post-card .post-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.full-post-card p.text-muted {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.full-post-card .btn {
+    margin-left: 5px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.full-post-card .btn-warning:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.full-post-card .btn-danger:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.full-post-card a.back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #ff6f91;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.full-post-card a.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-post-card {
+        padding: 30px;
+    }
+
+    .full-post-card h1 {
+        font-size: 1.8rem;
+    }
+
+    .full-post-card .post-content {
+        font-size: 1rem;
+    }
+}
+/* Edit Post Card - Functional + Broad Style */
+.edit-post-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto;
+}
+
+.edit-post-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.edit-post-card h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ff6f91;
+    text-align: center;
+}
+
+.edit-post-card textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.edit-post-card textarea:focus {
+    border-color: #ff6f91;
+    box-shadow: 0 0 10px rgba(255,111,145,0.5);
+}
+
+.edit-post-card .btn-update {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.edit-post-card .btn-update:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.edit-post-card .back-link {
+    display: inline-block;
+    margin-top: 15px;
+    text-align: center;
+    color: #ff6f91;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.edit-post-card .back-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .edit-post-card {
+        padding: 30px;
+    }
+
+    .edit-post-card h1 {
+        font-size: 1.8rem;
+    }
+}

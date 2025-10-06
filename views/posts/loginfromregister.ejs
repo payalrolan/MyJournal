@@ -1,0 +1,14 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<main class="form-container text-center">
+    <h1>Login to Mood Tracker</h1>
+    <p class="subtitle">Enter your credentials to continue</p>
+
+    <form method="post" action="/<%= id %>/login">
+        <input placeholder="Enter username" name="username" type="text" required>
+        <input placeholder="Enter password" name="password" type="password" required>
+        <button type="submit" class="btn btn-success">Login</button>
+    </form>
+
+    <p class="note">Don’t have an account? <a href="/registerpage">Register</a></p>
+</main>

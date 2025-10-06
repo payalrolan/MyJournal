@@ -1,0 +1,18 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<main class="d-flex flex-column align-items-center justify-content-center my-5">
+    <div class="card p-4" style="max-width: 600px; width: 90%;">
+        <h1 class="text-center mb-3">Add a Post for <%= user.username %></h1>
+        <p class="text-center text-muted mb-4">Share your mood or thoughts for today</p>
+
+        <form action="/addpost" method="POST">
+            <textarea name="content" placeholder="Write your mood..." required class="form-control mb-3" rows="5"></textarea>
+            <input type="hidden" name="user_id" value="<%= user.id %>">
+            <button type="submit" class="btn gradient-btn w-100">Submit Post</button>
+        </form>
+
+        <p class="text-center mt-3">
+            <a href="/user/<%= user.id %>">&larr; Back to Dashboard</a>
+        </p>
+    </div>
+</main>

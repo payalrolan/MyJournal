@@ -1,0 +1,16 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<main class="form-container text-center">
+    <h1 class="form-title">Register</h1>
+    <p class="subtitle">Create a new account to start your personal journaling journey.</p>
+
+    <form class="register-form" method="POST" action="/register">
+        <input class="form-input" type="text" name="username" placeholder="Enter username" required>
+        <input class="form-input" type="password" name="password" placeholder="Enter password" required>
+        <button type="submit" class="btn form-btn">Register</button>
+    </form>
+
+    <p class="note">
+        Already have an account? <a href="/loginpage">Login</a>
+    </p>
+</main>

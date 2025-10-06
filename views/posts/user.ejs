@@ -1,0 +1,41 @@
+<% layout("layouts/boilerplate.ejs") %>
+
+<main class="dashboard-container container py-5">
+    <h1 class="dashboard-title mb-4">Welcome, <%= user.username %>!</h1>
+
+    <h2 class="section-title mb-3">Your Posts</h2>
+
+    <% if (posts.length === 0) { %>
+        <p class="subtitle">You have no posts yet.</p>
+    <% } else { %>
+        <div class="row g-4">
+            <% posts.forEach(post => { %>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card post-card h-100 shadow-sm">
+                        <div class="card-body">
+                            <% 
+                                const createdDate = new Date(post.created_at);
+                                const formattedDate = createdDate.toLocaleDateString('en-US', {
+                                    year: 'numeric',
+                                    month: 'short',
+                                    day: 'numeric'
+                                });
+                                const preview = post.content.length > 100 ? post.content.substring(0, 100) + '...' : post.content;
+                            %>
+
+                            <!-- Clickable preview redirects to full post -->
+                            <a href="/<%= user.id %>/post/<%= post.id %>" class="text-decoration-none text-dark">
+                                <p class="mb-1"><%= preview %></p>
+                                <small class="text-muted">Created at: <%= formattedDate %></small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    <% } %>
+
+    <div class="text-center mt-4">
+        <a href="/<%= user.id %>/addpost" class="btn btn-success btn-lg add-post-btn">Add New Post</a>
+    </div>
+</main>
